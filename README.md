@@ -98,6 +98,9 @@ int sum = persons.stream().filter(p -> p.getAge() > 10).mapToInt(p -> p.getAge()
 * Stream operations are either intermediate or terminal
 * Processed vertically for non-stateful operations
 
+
+![Alt text](images/stream-pipe.png?raw=true "Streams")
+
 ```java
 int sum = persons.stream().filter(p -> p.getAge() > 10).mapToInt(p -> p.getAge()).sum();
 List<Person> ps = persons.stream().filter(p -> p.getAge() > 10).collect(Collectors.toList());
@@ -110,7 +113,7 @@ DEMO: [StreamLazinessTest.java](src/test/java/se/sjostric/samples/j8/lambda/Stre
 * Never return null again
 * Not a functional thing
 * Inherits Object and has several or*, is* methods
-* See ![Alt text](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html "Javadoc Optional")
+* See [https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html](Javadoc Optional)
 
 ### Example
 
