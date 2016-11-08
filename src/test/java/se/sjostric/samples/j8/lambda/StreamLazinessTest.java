@@ -14,7 +14,7 @@ public class StreamLazinessTest {
 
 	@Before
 	public void setUp() throws Exception {
-		persons = Arrays.asList(new Person("Apan", 22), new Person("Papan", 20), new Person("Nisse", 10),
+		persons = Arrays.asList(new Person("Apan", 10), new Person("Papan", 20), new Person("Nisse", 10),
 				new Person("Rickard", 12), new Person("Kalle", "Erik", 18), new Person("Nicke", 13));
 	}
 
@@ -47,7 +47,7 @@ public class StreamLazinessTest {
 		// processing of the list is only done until the findAny is satisfied,
 		// together with the vertical nature of the processing this reduces work
 		// being done
-		persons.parallelStream().filter(p -> {
+		persons.stream().filter(p -> {
 			System.out.println("Checking: " + p);
 			return p.getAge() >= 18;
 		}).findAny().ifPresent(System.out::println);

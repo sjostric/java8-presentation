@@ -22,18 +22,18 @@ public class OptionalTest {
 	@Test
 	public void testOptional() {
 		System.out.println("*** Find all persons and print their mid name, or else MISSING");
-		persons.stream().map(t -> t.getMidName()).forEach(System.out::println);
-//
-//		Optional<Person> firstWithNoMidName = persons.stream().filter(t -> !t.getMidName().isPresent()).findFirst();
-//		firstWithNoMidName.ifPresent(t -> System.out.println(t.getMidName().orElse("NO MIDNAME")));
-//
-//		try {
-//			firstWithNoMidName.ifPresent(
-//					t -> System.out.println(t.getMidName().orElseThrow(() -> new IllegalStateException(""))));
-//			throw new IllegalStateException("Not expected");
-//		} catch (Exception e) {
-//			System.out.println("Got the expected exception since mid name is missing");
-//		}
+		persons.stream().map(t -> t.getMidName().orElse("MISSING")).forEach(System.out::println);
+
+		Optional<Person> firstWithNoMidName = persons.stream().filter(t -> !t.getMidName().isPresent()).findFirst();
+		firstWithNoMidName.ifPresent(t -> System.out.println(t.getMidName().orElse("NO MIDNAME")));
+
+		try {
+			firstWithNoMidName.ifPresent(
+					t -> System.out.println(t.getMidName().orElseThrow(() -> new IllegalStateException(""))));
+			throw new IllegalStateException("Not expected");
+		} catch (Exception e) {
+			System.out.println("Got the expected exception since mid name is missing");
+		}
 	}
 
 }

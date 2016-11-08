@@ -14,6 +14,8 @@ Java 8 presentation held by me at my company office Dec 2015.
 
 ## Java 7 is dead
 
+Information from Oracle:
+
 ![Alt text](images/java7-dead.png?raw=true "Java 7 is dead")
 
 ## Functional Programming

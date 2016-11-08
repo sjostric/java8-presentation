@@ -56,8 +56,8 @@ public class FunctionalInterfacesTest {
 
 		// abstract method inherited from BiFunction: apply(T t, U u)
 		// x and y are being "applied"
-		//BinaryOperator<Integer> sumAges = (x, y) -> x + y;
-		Integer sumAge = ageStream.reduce(0, (x, y) -> x + y);
+		BinaryOperator<Integer> sumAges = (x, y) -> x + y;
+		Integer sumAge = ageStream.reduce(0, sumAges);
 		System.out.println(sumAge);
 
 	}
