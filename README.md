@@ -2,6 +2,11 @@
 
 Java 8 presentation held by me at my company office Dec 2015. 
 
+Pupose was:
+* Practice Java 8
+* Practice presenting
+* Competence spread
+
 ## Contents
 
 * Java 7 is dead
