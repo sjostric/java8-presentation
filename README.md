@@ -44,20 +44,20 @@ Interface:
 ### Interfaces
 
 Functional interfaces and their (single) abstract method.
-* [Predicate<T>](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#filter-java.util.function.Predicate-)
+* [```Predicate<T>```](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#filter-java.util.function.Predicate-)
   * Boolean test(T t): e.g [Stream#filter](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#filter-java.util.function.Predicate-)
-* [Function<T,R>](https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html)
+* [```Function<T,R>```](https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html)
   * R apply(T t): e.g [Stream#map](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#map-java.util.function.Function-)
-* [Supplier<T>](https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html)
+* [```Supplier<T>```](https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html)
   * T get(): e.g [Optional#orEsleThrow](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html#orElseThrow-java.util.function.Supplier-)
-* [Consumer<T>](https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html)
+* [```Consumer<T>```](https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html)
   * void accept(T t): e.g [Stream#forEach](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#forEach-java.util.function.Consumer-)
-* [Comparator<T>](https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html)
+* [```Comparator<T>```](https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html)
   * int compare(T o1, T o): e.g [Stream#sorted](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#sorted-java.util.Comparator-) (stateful)
 
 ## Lambda Expressions
 * (arg) -> body, e.g: (int a, int b) -> {return a +b}
-* Instantiates ìFunctionsî
+* Instantiates ‚ÄúFunctions‚Äù
   * Predicate<Person> personFilter = {p -> p.age > 10};
   * persons.stream().filter(personFilter);
   * persons.stream().filter(p -> p.age > 10);
