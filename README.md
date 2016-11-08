@@ -10,6 +10,7 @@ Java 8 presentation held by me at my company office Dec 2015.
 * Lambda Expressions
 * Streams
 * Optional
+* Interfaces default methods
 * More Java 8 changes
 
 ## Java 7 is dead
@@ -23,14 +24,6 @@ Information from Oracle:
 * Output depends on input only, applying f(x) several times give the same output
 * Code that are side-effect free are easier to debug
 * Java 8 still OO, but brings the functional programming style
-
-## DEMO: default methods
-Test code:
-[InterfaceDefaultMethodsTest.java](src/test/java/se/sjostric/samples/j8/lambda/InterfaceDefaultMethodsTest.java)
-
-Interface:
-[Age.java](src/main/java/se/sjostric/samples/j8/lambda/Age.java)
-
 
 ## Functional Interfaces
 
@@ -110,7 +103,14 @@ List<Person> ps = persons.stream().filter(p -> p.getAge() > 10).collect(Collecto
 
 DEMO: [StreamLazinessTest.java](src/test/java/se/sjostric/samples/j8/lambda/StreamLazinessTest.java)
 
-### Optionals
+## Interfaces default methods
+Test code:
+[InterfaceDefaultMethodsTest.java](src/test/java/se/sjostric/samples/j8/lambda/InterfaceDefaultMethodsTest.java)
+
+Interface:
+[Age.java](src/main/java/se/sjostric/samples/j8/lambda/Age.java)
+
+## Optionals
 
 * Never return null again
 * Not a functional thing
@@ -138,6 +138,7 @@ DEMO: [OptionalTest.java](src/test/java/se/sjostric/samples/j8/lambda/OptionalTe
 * Memory model
 * Collections/Map
 * flatMap, collectors, parallel stream etc
+
 
 ## Summary
 
