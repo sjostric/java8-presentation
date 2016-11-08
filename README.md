@@ -42,15 +42,42 @@ Interface:
 ### Interfaces
 
 Functional interfaces and their (single) abstract method.
-* Predicate<T>
+1. Predicate<T>
 ..* Boolean test(T t): e.g Stream#filter
-* Function<T,R>
+2. Function<T,R>
 ..* R apply(T t): e.g Stream#map
-* Supplier<T>
+3. Supplier<T>
 ..* T get(): e.g Optional#orEsleThrow
-* Consumer<T>
+4. Consumer<T>
 ..* void accept(T t): e.g Stream#forEach
-* Comparator<T>
+5. Comparator<T>
 ..* int compare(T o1, T o): e.g Stream#sorted (stateful)
+
+## Lambda Expressions
+1. (arg) -> body, e.g: (int a, int b) -> {return a +b}
+2. Instantiates “Functions”
+..* Predicate<Person> personFilter = {p -> p.age > 10};
+..* persons.stream().filter(personFilter);
+..* persons.stream().filter(p -> p.age > 10);
+
+### Lambdas: example
+```java
+int sumAge = 0;
+for (Person p : persons){
+ if (p.getAge() > 10){
+    sumAge += p.getAge();
+  }
+}
+
+```
+
+```java
+sumAge = persons.stream().filter(t -> t.getAge() > 10).mapToInt(t -> t.getAge()).sum();
+sumAge = persons.stream().filter(t -> t.getAge() > 10).map(t -> t.getAge()).reduce(0, Integer::sum);
+sumAge = persons.stream().filter(t -> t.getAge() > 10).map(t -> t.getAge()).reduce(0, (a, b) -> (a + b));
+```
+
+
+DEMO: [FunctionalInterfacesTest.java](/src/test/java/se/sjostric/samples/j8/lambda/FunctionalInterfacesTest.java)
 
 
