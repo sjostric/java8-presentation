@@ -44,16 +44,16 @@ Interface:
 ### Interfaces
 
 Functional interfaces and their (single) abstract method.
-* Predicate<T>
-  * Boolean test(T t): e.g Stream#filter
-* Function<T,R>
-  * R apply(T t): e.g Stream#map
-* Supplier<T>
-  * T get(): e.g Optional#orEsleThrow
-* Consumer<T>
-  * void accept(T t): e.g Stream#forEach
-* Comparator<T>
-  * int compare(T o1, T o): e.g Stream#sorted (stateful)
+* [https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html](Predicate<T>)
+  * Boolean test(T t): e.g [https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#filter-java.util.function.Predicate-](Stream#filter)
+* [https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html](Function<T,R>)
+  * R apply(T t): e.g [https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#map-java.util.function.Function-](Stream#map)
+* [https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html](Supplier<T>)
+  * T get(): e.g [https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html#orElseThrow-java.util.function.Supplier-](Optional#orEsleThrow)
+* [https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html](Consumer<T>)
+  * void accept(T t): e.g [https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#forEach-java.util.function.Consumer-](Stream#forEach)
+* [https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html](Comparator<T>)
+  * int compare(T o1, T o): e.g [https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#sorted-java.util.Comparator-](Stream#sorted) (stateful)
 
 ## Lambda Expressions
 * (arg) -> body, e.g: (int a, int b) -> {return a +b}
