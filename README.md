@@ -23,6 +23,34 @@ Java 8 presentation held by me at my company office Dec 2015.
 * Java 8 still OO, but brings the functional programming style
 
 ## DEMO: default methods
-[Default methods in interfaces](src/test/java/se/sjostric/samples/j8/lambda/InterfaceDefaultMethodsTest.java)
+Test code:
+[InterfaceDefaultMethodsTest.java](src/test/java/se/sjostric/samples/j8/lambda/InterfaceDefaultMethodsTest.java)
+
+Interface:
+[Age.java]./src/main/java/se/sjostric/samples/j8/lambda/Age.java
+
+
+## Functional Interfaces
+
+* Functional interfaces represents a "function"
+* Exactly one abstract method
+* See "abstract methods" on Javadoc Function
+* @FunctionalInterface, marker interface (not required), but compiler will fail if e.g more than one abstract method etc.
+* Default methods are not abstract, so any number of them goes
+* Normally instantiated by Lambda expressions (see Lambdas)
+
+### Interfaces
+
+Functional interfaces and their (single) abstract method.
+* Predicate<T>
+..* Boolean test(T t): e.g Stream#filter
+* Function<T,R>
+..* R apply(T t): e.g Stream#map
+* Supplier<T>
+..* T get(): e.g Optional#orEsleThrow
+* Consumer<T>
+..* void accept(T t): e.g Stream#forEach
+* Comparator<T>
+..* int compare(T o1, T o): e.g Stream#sorted (stateful)
 
 
